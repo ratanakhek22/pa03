@@ -703,7 +703,7 @@ myv2p(uint64 va)
     int perm = (*pte) & 0xfff; // Extract permission bits
     
     // Display the information
-    printf("0x%d   |   0x%d   |   ", va, pa);
+    printf("   0x%d       |      0x%d      |      ", va, pa);
     
     // Display permissions
     if (perm & PTE_R) printf("R");
@@ -713,7 +713,9 @@ myv2p(uint64 va)
     if (perm & PTE_X) printf("X");
     else printf("-");
     
-    printf("\n");
+    printf("\n\n");
+  } else {
+    printf("   0x%d       |         Invalid Address\n\n", va);
   }
   
   // Release the process lock
@@ -745,7 +747,7 @@ mypages(void)
       int perm = (*pte) & 0xfff; // Extract permission bits
       
       // Display the information
-      printf("0x%d   |   0x%d   |   ", va, pa);
+      printf("   0x%d       |      0x%d      |      ", va, pa);
       
       // Display permissions
       if (perm & PTE_R) printf("R");
