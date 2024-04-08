@@ -28,5 +28,5 @@ Please use the attached folder xv6-riscv.
 3. make clean
 4. make qemu
 5. Once you are in the QEMU terminal, you can run the compiled test programs.
-6. test_myv2p [va] - Runs test code found in test_myv2p.c for any integer virtual address.
+6. test_myv2p [va] - Runs test code found in test_myv2p.c for any integer [va] virtual address.
 7. test_mypages [t] - Runs test code found in test_mypages.c. Choose which [t] test case to run 1-5.
